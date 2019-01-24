@@ -1,0 +1,31 @@
+{
+  "name": "morejuststore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "source .env; nodemon app.js",
+    "prestart": "source .env; npm run build-front",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-front": "cd client && npm i && npm run build && cd ..",
+    "deploy-front": "cd client && npm run deploy && cd ..",
+    "deploy": "sh deploy.sh",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
+    "github-api": "^3.0.0",
+    "json-stringify-safe": "^5.0.1",
+    "multer": "^1.4.1",
+    "request": "^2.88.0",
+    "rimraf": "^2.6.3",
+    "utf8": "^3.0.0"
+  }
+}
